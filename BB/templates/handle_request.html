@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Request Blood | Blood Bank{% endblock %}
+
+{% block css_files %} 
+<link rel="stylesheet" href="{% static 'handle_request.css' %}" /> 
+{% endblock %} 
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Request Blood</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+{% endblock %}

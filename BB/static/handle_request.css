@@ -1,0 +1,88 @@
+/* handle_request.css - Compact, centered style for blood request form */
+body {
+    background: #f7fafd;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 24px 18px 18px 18px;
+    margin: 48px auto 0 auto;
+    max-width: 350px;
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2, h3 {
+    color: #b30000;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+form {
+    width: 100%;
+    margin-top: 8px;
+}
+label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+    font-size: 0.98rem;
+}
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 0.98rem;
+    background: #f9f9f9;
+    transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+    border: 1.5px solid #b30000;
+    outline: none;
+}
+button, input[type="submit"] {
+    background: #b30000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 4px;
+}
+button:hover, input[type="submit"]:hover {
+    background: #d32f2f;
+}
+.alert, .message {
+    background: #ffeaea;
+    color: #b30000;
+    border: 1px solid #f5c2c7;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.98rem;
+}
+.text-center {
+    text-align: center;
+}
+@media (max-width: 500px) {
+    .container {
+        padding: 8px 2px;
+        margin-top: 16px;
+        max-width: 98vw;
+    }
+    h2, h3 {
+        font-size: 1.05rem;
+    }
+}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}View Donors{% endblock %}
+{% block css_files %} 
+<link rel="stylesheet" href="{% static 'view_donors.css' %}" /> 
+{% endblock %} 
+
+{% block content %}
+
+<div class="container">
+    <h2 class="text-center mb-4">List of Blood Donors</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Address</th>
+                <th>Blood Group</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for donor in donors %}
+            <tr>
+                <td data-label="Name">{{ donor.donor_name }}</td>
+                <td data-label="Age">{{ donor.age }}</td>
+                <td data-label="Phone">{{ donor.phone_no }}</td>
+                <td data-label="Email">{{ donor.email }}</td>
+                <td data-label="City">{{ donor.city }}</td>
+                <td data-label="Address">{{ donor.address }}</td>
+                <td data-label="Blood Group">{{ donor.blood_group }}</td>
+                <td data-label="Date">{{ donor.date }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8" class="text-center">No donors found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
