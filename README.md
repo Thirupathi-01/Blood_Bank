@@ -10,7 +10,7 @@ A web-based application for managing blood donors, blood requests, and inventory
 - Donor eligibility based on blood group compatibility and 90-day donation interval
 - Admin interface for managing all data
 - Clean, responsive UI for all major pages
-- **In Progress:** Machine Learning algorithm to use donor location coordinates to find and notify the nearest eligible donors if no one is available in the requested city
+- **In Progress:** KMedoids to use donor location coordinates to find and notify the nearest eligible donors if no one is available in the requested city
 
 ## Setup Instructions
 
