@@ -75,18 +75,23 @@ WSGI_APPLICATION = 'BLOODBANK.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'bloodbank',
+#         'USER': 'root',
+#         'PASSWORD': 'Thiru@0212',
+#         'HOST': 'localhost',  # Or your MySQL server address
+#         'PORT': '3306',       # Default MySQL port
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bloodbank',
-        'USER': 'root',
-        'PASSWORD': 'Thiru@0212',
-        'HOST': 'localhost',  # Or your MySQL server address
-        'PORT': '3306',       # Default MySQL port
-    }
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL"),
+        conn_max_age=600,  # persistent connections
+    )
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -135,3 +140,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = ''  # Replace with your email
 
 EMAIL_HOST_PASSWORD = ''  # Use an App Password, NOT your main password
+
