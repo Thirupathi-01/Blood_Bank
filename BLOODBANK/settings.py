@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rx8f)4(gj%9)!sxbiwbt6ugk4sl648eivnp53jalk+vlm(0s(h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1","blood-bank-application-op47.onrender.com"]
 
 
 # Application definition
@@ -133,4 +133,5 @@ EMAIL_HOST = 'smtp.gmail.com'  # For Gmail, change if using another provider
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = ''  # Replace with your email
+
 EMAIL_HOST_PASSWORD = ''  # Use an App Password, NOT your main password
