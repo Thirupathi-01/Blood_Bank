@@ -88,12 +88,24 @@ WSGI_APPLICATION = 'BLOODBANK.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default=os.environ.get("DATABASE_URL"),
+#         conn_max_age=600,  # persistent connections
+#     )
+# }
 DATABASES = {
-    "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL"),
-        conn_max_age=600,  # persistent connections
-    )
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "blooddb_lngq",
+        "USER": "blooddb_lngq_user",
+        "PASSWORD": "F7IeqPbyyvumVerKCE2SRK7aYdsCLlVx",
+        "HOST": "dpg-d2mjmb9r0fns73b91ob0-a",  # e.g., localhost or IP
+        "PORT": "5432",
+        "CONN_MAX_AGE": 600,  # optional, for persistent connections
+    }
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -142,5 +154,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = ''  # Replace with your email
 
 EMAIL_HOST_PASSWORD = ''  # Use an App Password, NOT your main password
+
 
 
