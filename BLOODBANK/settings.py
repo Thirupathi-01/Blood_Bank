@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import dj_database_url  # <-- ADD THIS
+
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -140,4 +142,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = ''  # Replace with your email
 
 EMAIL_HOST_PASSWORD = ''  # Use an App Password, NOT your main password
+
 
